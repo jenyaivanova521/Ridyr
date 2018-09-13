@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "403378061390",
+    "firebase_url": "https://ridyr-1497879047259.firebaseio.com",
+    "project_id": "ridyr-1497879047259",
+    "storage_bucket": "ridyr-1497879047259.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403378061390:android:9448b7e21e989ab7",
+        "android_client_info": {
+          "package_name": "io.ridyr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403378061390-qplqu47v79v9iqqoj00um60sk3029040.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ridyr",
+            "certificate_hash": "7f628e7ed4d32be791dd1624fc6c6b28d926b3fe"
+          }
+        },
+        {
+          "client_id": "403378061390-i4shpuvhu52vcbimf5sg11j9ommranbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuGFTTdjQmF_k3N_NrSjeJFSXAJKx17KY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403378061390-i4shpuvhu52vcbimf5sg11j9ommranbe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "403378061390-nvgdgcvqebu89uggn2jaj8dvpp69th63.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.ridyr"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

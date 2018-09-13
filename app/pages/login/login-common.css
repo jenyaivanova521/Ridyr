@@ -1,0 +1,100 @@
+.container {
+    padding-left: 30;
+    padding-right: 30;
+    background-color: #777B1FA2;
+    padding-top: 30;
+}
+.logo {
+  margin-top: 5;
+  margin-bottom: 5;
+  width:120;
+}
+.background {
+  width:100%;
+  height:100%;
+}
+.signin_label {
+  /* font-family: FontAwesome; */
+  font-size: 24;
+  vertical-align: middle;  
+  width: 80%;
+  margin-top: 20;
+  color: white;
+  font-family: "ProximaNova-Semibold";
+}
+/* Button, TextField {
+  margin-left: 16;
+  margin-right: 16;
+  margin-bottom: 10;
+  height:60;
+} */
+.email_title {
+  margin-top: 20;
+  color:white;
+}
+.email {
+  width: 100%;  
+  border-width: 1 1 1 1;
+  border-color: #becad6;
+  margin-top: 6;
+  color:white;
+}
+.password_title {
+  margin-top: 15;
+  color:white;
+}
+password_layout {
+  width: 100%;
+  height: 64;
+}
+.password {
+  width: 100%;  
+  border-width: 1 1 1 1;
+  border-color: #becad6;
+  margin-top: 6;
+  margin-bottom: 20;
+  color:white;
+}
+.eye {
+  width: 15;
+  height: 15;
+  margin-top: 5;
+  margin-right: 10;
+}
+.submit-button {
+  background-color: white;
+  color: #7B1FA2;
+  text-transform: none;
+  /* font-weight: bold; */
+  height: 60;
+  padding: 0 0 0 0; 
+}
+.recover-button {
+  background-color: transparent;
+  text-transform: none;
+  color: white;
+  text-transform: none;
+  border-width: 1;
+  border-color: transparent;
+  text-decoration: underline;
+}
+.forgot-password-label {
+  margin-top: 15;
+  color:white;
+  text-align: center;
+}
+.signup_label {
+  margin-top: 60;
+  color:white;
+  text-align: center;
+}
+.copyright {
+  height: 50;
+  width: 150;
+  margin-top: 5;
+  margin-bottom: 5;  
+}
+.bottom {
+  width:100%;
+  height:100%;
+}
