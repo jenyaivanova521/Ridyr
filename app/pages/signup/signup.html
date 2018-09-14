@@ -1,8 +1,10 @@
 <GridLayout #container rows="auto, *" width="100%">
   <Image src="res://bg_img" stretch="aspectFill" class="background"></Image>
   <StackLayout row="0" orientation="vertical" class="container">    
-    <label class="signin_label" [text]="isLoggingIn ?'login':'sign-up'">/</label>
-    
+    <label class="signin_label" text='sign-up'>/</label>
+    <label class="email_title" text="Full Name">/</label>
+    <TextField hint="Full Name" [(ngModel)]="user.fullName"
+      autocorrect="false" autocapitalizationType="none" class="email"></TextField>
     <label class="email_title" text="Your email">/</label>
     <TextField hint="Your email" keyboardType="email" [(ngModel)]="user.email"
       autocorrect="false" autocapitalizationType="none" class="email"></TextField>
@@ -11,12 +13,12 @@
       <TextField class="password" hint="Password" [secure]="!isShowedPassword" [(ngModel)]="user.password" id="password" visibility="{{ isLoggingIn ? 'visible' : 'collapsed' }}"></TextField>
       <Image class="eye" [src]="isShowedPassword? 'res://eye_open':'res://eye_close'" (tap)="toggleShowPassword()" visibility='collapsed' horizontalAlignment="right"></Image>
     </GridLayout>
-    <GridLayout class="submit-button-bg">
-        <Button [text]="isLoggingIn ? 'Log in' : 'Send reset link'" class="submit-button" (tap)="submit()"></Button>
+    <GridLayout class="submit-button">
+        <Button text='SIGN UP' class="submit-button" (tap)="submit()"></Button>
     </GridLayout>    
-    <label class="forgot-password-label" text="Forgotten your password?">/</label>
-    <label class="signup_label" text="Need an account?">/</label>
-    <Button [text]="isLoggingIn ? 'SIGNUP' : 'Back to login'" (tap)="toggleDisplay()" underline="true" class="recover-button"></Button>  
+    
+    <label class="signup_label" text="Already have an account?">/</label>
+    <Button text="LOGIN" (tap)="login()" underline="true" class="recover-button"></Button>  
     
   </StackLayout>  
 </GridLayout>
