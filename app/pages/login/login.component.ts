@@ -40,12 +40,9 @@ export class LoginComponent implements OnInit {
     this.page.actionBarHidden = true;    
     this.isShowedPassword = false;
 
-    if( Config.token != "" && Config.token != null ) {      
-      this.router.navigate(["/list"]);
-    }
-    if (!isAndroid) {
-      return;
-    }
+    // if( Config.token != "" && Config.token != null ) {      
+    //   this.router.navigate(["/list"]);
+    // }
 
   }
   submit() {

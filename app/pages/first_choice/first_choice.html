@@ -1,0 +1,13 @@
+<GridLayout rows="auto, *" width="100%">
+  <Image src="res://bg_img" stretch="aspectFill" class="background"></Image>
+  <StackLayout row="0" orientation="vertical" class="container">  
+    <Image src = "res://img_icon" class="logo"></Image>  
+    <label class="logo_label" text="Global Ride Share Community">/</label>     
+    <GridLayout class="submit-button-bg">
+        <Button text="ARE YOU A RIDYR?" class="submit-button" (tap)="onSelectRidyr()"></Button>
+    </GridLayout>    
+    <GridLayout class="driver-button-bg">
+      <Button text="ARE YOU A DRIVER?" class="submit-button" (tap)="onSelectDriver()"></Button>
+  </GridLayout> 
+  </StackLayout>  
+</GridLayout>

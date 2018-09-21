@@ -2,6 +2,7 @@ import * as pushPlugin from "nativescript-push-notifications";
 
 export class Config {
   static token = "";
+  static type = "";
 
   static pushSettings = {
     senderID: "385361542120", // Required: setting with the sender/project number
