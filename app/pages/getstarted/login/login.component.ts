@@ -1,6 +1,10 @@
 import { Component, OnInit, ElementRef, ViewChild  } from "@angular/core";
 import { Router } from "@angular/router";
 import { Page } from "ui/page";
+import { Color } from "color";
+import { View } from "ui/core/view";
+import { EventData } from "tns-core-modules/data/observable";
+import { getString, setString } from "application-settings";
 import { LoadingIndicator } from 'nativescript-loading-indicator';
 import { Config } from "~/shared/config";
 // import * as pushPlugin from "nativescript-push-notifications";
@@ -10,18 +14,18 @@ import { AndroidApplication, AndroidActivityBackPressedEventData } from "applica
 import firebase = require("nativescript-plugin-firebase");
 import { User } from "~/shared/user/user";
 
+
 // or with TypeScript:
 // import {LoadingIndicator} from "nativescript-loading-indicator";
 @Component({
   selector: "my-app",
-  templateUrl: "./pages/signup/signup.html",
-  styleUrls: ["pages/signup/signup-common.css", "pages/signup/signup.css"]
+  templateUrl: "./pages/getstarted/login/login.html",
+  styleUrls: ["pages/getstarted/login/login-common.css", "pages/getstarted/login/login.css"]
 
 })
 
-export class SignupComponent implements OnInit {
+export class LoginComponent implements OnInit {
   user: User;
-  confirm: string;
   isLoggingIn = true;
   private indicator: LoadingIndicator;
   isShowedPassword = false;
@@ -34,14 +38,22 @@ export class SignupComponent implements OnInit {
   
   ngOnInit() {    
     this.page.actionBarHidden = true;    
-    this.isShowedPassword = false;    
-    
+    this.isShowedPassword = false;
+
+    // if( Config.token != "" && Config.token != null ) {      
+    //   this.router.navigate(["/list"]);
+    // }
+
   }
   submit() {
-    this.signup();
+    if (this.isLoggingIn) {
+      this.login();
+    } else {
+      // this.signup();
+    }
   }
   // const context = "some  context";
-  signup() {
+  login() {
     if( this.user.email == null || this.user.email.length == 0 ) {
       alert("Email can not be empty");
       return;
@@ -53,38 +65,34 @@ export class SignupComponent implements OnInit {
     if(  this.user.password == null || this.user.password.length < 6 ) {
       alert("Password should be 6 more letters");
       return;
-    }    
+    }
+    
     
     this.indicator.show({
       message: 'Please wait...'
     });
-    firebase.createUser({
-      email: this.user.email,
-      password: this.user.password
-    }).then( (result) => {
-          console.log("Created");
-          this.indicator.hide();
-          alert({
-            title: "User created",
-            message: "userid: " + result.key,
-            okButtonText: "Okay"
-          })
-          this.login();
-        },
-        (errorMessage) => {
-          console.log("Error");
-          this.indicator.hide();
-          alert({
-            title: "No user created",
-            message: errorMessage,
-            okButtonText: "Okay"
-          });
+    firebase.login(
+      {
+        type: firebase.LoginType.PASSWORD,
+        passwordOptions: {
+          email: this.user.email,
+          password: this.user.password
         }
-    );
+      })
+      .then((result) => {
+        this.indicator.hide();
+        console.log(JSON.stringify(result));
+        this.router.navigate(["/home"]);
+      })
+      .catch((error) => {
+        this.indicator.hide();
+        console.log(error);
+        alert("Login Failed!\n"+error);
+      });
   }
 
-  login() {
-    this.router.navigate(["/login"]);    
+  toggleDisplay() {    
+    this.router.navigate(["/signup"]);      
   }
   toggleShowPassword(){
     this.isShowedPassword = !this.isShowedPassword;

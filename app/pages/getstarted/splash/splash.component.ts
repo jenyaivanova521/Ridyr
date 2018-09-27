@@ -14,8 +14,8 @@ import { isAndroid } from "platform";
 
 @Component({
   selector: "my-app",
-  templateUrl: "./pages/splash/splash.html",
-  styleUrls: ["pages/splash/splash-common.css", "pages/splash/splash.css"]
+  templateUrl: "./pages/getstarted/splash/splash.html",
+  styleUrls: ["pages/getstarted/splash/splash-common.css", "pages/getstarted/splash/splash.css"]
 
 })
 export class SplashComponent implements OnInit {

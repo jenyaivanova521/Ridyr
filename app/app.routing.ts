@@ -1,8 +1,8 @@
-import { LoginComponent } from "./pages/login/login.component";
-import { SplashComponent } from "./pages/splash/splash.component";
-import { SignupComponent } from "./pages/signup/signup.component";
-import { FirstChoiceComponent } from "./pages/first_choice/first_choice.component";
 import { HomeComponent } from './pages/home/home.component';
+import { SplashComponent } from '~/pages/getstarted/splash/splash.component';
+import { LoginComponent } from '~/pages/getstarted/login/login.component';
+import { SignupComponent } from '~/pages/getstarted/signup/signup.component';
+import { FirstChoiceComponent } from '~/pages/getstarted/first_choice/first_choice.component';
 
 export const routes = [
   { path: "", component: SplashComponent},

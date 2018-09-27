@@ -51,10 +51,6 @@ export class HomeComponent implements OnInit {
             } else if (newIndex === 2) {
                 this.tabSelectedIndexResult = "Settings Tab (tabSelectedIndex = 2 )";
             }
-            alert(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`)
-                .then(() => {
-                    console.log("Dialog closed!");
-                });
         }
     }
   ngOnInit() {    

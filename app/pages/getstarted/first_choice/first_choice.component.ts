@@ -10,8 +10,8 @@ import { Page } from "tns-core-modules/ui/page/page";
 
 @Component({
   selector: "my-app",
-  templateUrl: "./pages/first_choice/first_choice.html",
-  styleUrls: ["pages/first_choice/first_choice-common.css", "pages/first_choice/first_choice.css"]
+  templateUrl: "./pages/getstarted/first_choice/first_choice.html",
+  styleUrls: ["pages/getstarted/first_choice/first_choice-common.css", "pages/getstarted/first_choice/first_choice.css"]
 
 })
 
