@@ -87,7 +87,7 @@ export class SplashComponent implements OnInit {
       //   Config.token = getString("token");
       // console.log("Existing Token: "+ Config.token);
       if( Config.token != "" && Config.token != null ) {      
-        this.router.navigate(["/home"]);
+        this.router.navigate(["/main_tabs"]);
       }
       else {
         this.router.navigate(["/first_choice"], {replaceUrl:true});

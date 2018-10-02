@@ -1,0 +1,18 @@
+<GridLayout rows="*, auto">
+  <StackLayout
+    class="page" [ngSwitch]="selectedTab" row="0">
+    <ItemsComponent *ngSwitchDefault></ItemsComponent>
+    <SecondItemComponent *ngSwitchCase="2"></SecondItemComponent>
+  </StackLayout>
+
+  <BottomBar 
+    row="1" 
+    [items]="items" 
+    [hide]="hidden" 
+    [titleState]="titleState" 
+    (loaded)="tabLoaded($event)" 
+    (tabSelected)="tabSelected($event)" 
+    [inactiveColor]="inactiveColor" 
+    [accentColor]="accentColor" 
+    colored="true"></BottomBar>
+</GridLayout>

@@ -82,7 +82,7 @@ export class LoginComponent implements OnInit {
       .then((result) => {
         this.indicator.hide();
         console.log(JSON.stringify(result));
-        this.router.navigate(["/home"]);
+        this.router.navigate(["/main_tabs"]);
       })
       .catch((error) => {
         this.indicator.hide();

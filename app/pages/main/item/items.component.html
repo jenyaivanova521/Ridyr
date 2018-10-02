@@ -1,0 +1,9 @@
+<ListView
+  [items]="items"
+  class="list-group">
+  <ng-template let-item="item">
+    <Label       
+      [text]="item.name"
+      class="list-group-item"></Label>
+  </ng-template>
+</ListView>
