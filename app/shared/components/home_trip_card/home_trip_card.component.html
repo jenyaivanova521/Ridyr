@@ -1,0 +1,46 @@
+<GridLayout>    
+    <FlexboxLayout class="content" flexDirection="column">
+        <StackLayout orientation="horizontal">
+            <Image stretch="aspectFill" class="profile"
+                src="~/resources/images/img-1.jpg"></Image>
+            <label text="Ryan from Ridyr Ride Sharing is confirmed for pickup at 15.40." class="pickup_text" textWrap="true"></label>            
+        </StackLayout>
+        <StackLayout orientation="horizontal" class="pickup">
+            <StackLayout width="20%">
+                <StackLayout class="pickup_position_circle_outline">
+                    <StackLayout class="pickup_position_circle"></StackLayout>
+                </StackLayout>
+                <StackLayout class="pickup_line"></StackLayout>
+            </StackLayout>
+            <StackLayout width="60%">
+                <label text="Pickup" class="pickup_title"></label>
+                <label text="Miami International Airport " class="pickup_address"></label>
+                <label text="Queens" class="pickup_address"></label>
+            </StackLayout>
+            <StackLayout class="pencil">
+                <label text="✏️" class="pencil_text"></label>                
+            </StackLayout>  
+        </StackLayout>
+        <StackLayout orientation="horizontal">
+            <StackLayout width="20%">
+                <StackLayout class="pickup_position_circle_outline">
+                    <StackLayout class="destination_position_circle"></StackLayout>
+                </StackLayout>
+                <StackLayout class="destination_line"></StackLayout>
+            </StackLayout>
+            <StackLayout width="60%">
+                <label text="Destination" class="pickup_title"></label>
+                <label text="36 W 38th Street  " class="pickup_address"></label>
+                <label text="New York, NY 10018" class="pickup_address"></label>
+            </StackLayout>
+            <StackLayout class="pencil">
+                <label text="✏️" class="pencil_text"></label>                
+            </StackLayout>  
+        </StackLayout>
+    </FlexboxLayout>
+    <Docklayout height="100%" stretchLastChild="false">
+        <DockLayout width="100%" stretchLastChild="false" dock="top">
+            <Label text="+" dock="right" class="btn_add"></Label>
+        </DockLayout>
+    </Docklayout> 
+</GridLayout>

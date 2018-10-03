@@ -1,0 +1,27 @@
+<ScrollView>  
+  <GridLayout >
+    <DockLayout width="100%" height="100%" backgroundColor="#7b1fa2" stretchLastChild="false">
+      <Image dock="top"
+        class="bg_home_img" stretch="aspectFill"
+        src="~/resources/images/home_banner.jpg"></Image>
+    </DockLayout>       
+    <StackLayout >
+      <Label class="home_title"
+        text="You are Going"></Label>
+      <StackLayout class="home_tab_overlap">
+        <HomeTabOverlap></HomeTabOverlap>
+      </StackLayout>
+      <Label text="YOUR TRIP" class="trip_title"></Label>
+      <StackLayout class="trip_card">
+        <HomeTripCard></HomeTripCard>
+      </StackLayout>
+      <Label text="TRIP TOP SUGGESTIONS" class="suggest_title"></Label>
+      <StackLayout class="trip_card">
+          <HomeSuggestCard></HomeSuggestCard>
+      </StackLayout>      
+    </StackLayout>
+  </GridLayout>
+</ScrollView> 
+  
+  
+

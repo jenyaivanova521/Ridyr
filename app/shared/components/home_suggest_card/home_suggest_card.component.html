@@ -1,0 +1,26 @@
+<FlexboxLayout flexDirection="column">
+    <GridLayout class="top_suggest">
+        <Image stretch="aspectFill" width="100%" height="100%"
+            src="~/resources/images/card-img-3.jpg"></Image>
+        <DockLayout width="100%" height="100%" stretchLastChild="false">
+            <StackLayout class="top_suggest_bottom" dock="bottom">
+                <label text="Lady Liberty Tour" class="top_suggest_title"></label>
+                <StackLayout class="seperator"></StackLayout>
+                <label text="🕓Thursday 4th Jan at 09.15" class="top_suggest_text"></label>
+            </StackLayout>            
+        </DockLayout> 
+        
+    </GridLayout>
+    <GridLayout [height]="content_height" class="gridview">
+        <GridView [items]="items" colWidth="45%" rowHeight="230">
+          <ng-template let-item="item" let-odd="odd">
+            <StackLayout margin="5" borderRadius="5" class="list-group-item" >
+                <Image [src]="item.src"></Image>
+                <Label [text]="item.name" class="list-group-item-text" textWrap="true"></Label>
+                <label [text]="item.type" class="list-group-item-type"></label>
+            </StackLayout>
+          </ng-template>
+        </GridView>
+    </GridLayout>
+</FlexboxLayout>
+

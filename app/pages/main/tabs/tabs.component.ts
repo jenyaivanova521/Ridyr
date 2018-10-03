@@ -33,7 +33,7 @@ export class TabsComponent implements OnInit {
     this.hidden = false;
     this.titleState = TITLE_STATE.ALWAYS_HIDE;
     this.inactiveColor = "white";
-    this.accentColor = "blue";
+    this.accentColor = "#939393";
 }
 
  tabSelected(args: SelectedIndexChangedEventData) {

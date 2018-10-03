@@ -28,6 +28,8 @@
 		"nativescript-bitmap-factory": "^1.7.1",
 		"nativescript-bottom-navigation": "^1.4.0",
 		"nativescript-bottombar": "^3.0.8",
+		"nativescript-gradient": "^2.0.1",
+		"nativescript-grid-view": "^4.1.1",
 		"nativescript-loading-indicator": "^2.4.0",
 		"nativescript-photoviewer": "^1.4.0",
 		"nativescript-plugin-firebase": "^6.3.0",

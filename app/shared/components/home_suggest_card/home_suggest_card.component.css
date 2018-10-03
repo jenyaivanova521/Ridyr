@@ -1,0 +1,145 @@
+.top_suggest {
+    width: 100%;
+    height: 280;
+}
+.top_suggest_bottom {
+    background-color: #90000000;
+    height:70;
+    padding-top:5;
+    padding-bottom: 5;
+    padding-left: 10;
+    padding-right: 10;
+}
+.top_suggest_title {
+    color: white;
+    font-size: 20;
+}
+.content {
+    background-color: #90000000;
+}
+.top_suggest_text {
+    color: white;
+    font-size: 12;
+}
+.seperator {
+    width: 100%;
+    height: 0.5;
+    background-color: white;
+    margin-left: 20;
+    margin-right: 20;
+    margin-top: 5;
+    margin-bottom: 5;
+}
+.list-group-item {
+    background-color:white;
+}
+.list-group-item-text {
+    font-size: 14;
+    margin-left: 5;
+}
+.list-group-item-type {
+    font-size: 12;
+    margin-left: 5;
+}
+.gridview {
+    margin-left:-5;
+    margin-right:-5;
+    margin-top:10;
+}
+.pickup_address {
+    font-size: 12;
+    color:white;
+}
+
+.pencil {
+    width: 20;
+    height: 20;
+    border-radius:50%;
+    background-color: #8c1bab;
+}
+.pencil_text {
+    font-family: 'IcoMoon-Free';
+    color:white;
+    font-size:15;
+    text-align:center;
+}
+.destination_line {
+    height: 60;
+}
+.destination_position_circle {    
+    width: 30;
+    height: 30;
+    border-radius:50%;
+    background-color: #f761a1;
+    margin-top: 4;
+}
+.tab_inactive {
+    width: 50%;
+    height: 40;
+    text-align:center;
+    vertical-align: center;
+    color: white;
+    margin-top: 17;
+}
+
+.top_content_left {
+    width: 40%;
+    padding-left: 15;
+}
+.top_content_left_font { 
+    color:white;
+    font-size: 12;
+}
+.top_content_left_font_big { 
+    color:white;
+    font-size: 30;
+}
+.top_content_middle {
+    width: 20%;
+    height: 50;
+    color:white;    
+    text-align:center;
+    font-size: 20;
+}
+.top_content_right {
+    width: 40%;
+    text-align:right;
+    padding-right: 15;
+}
+.top_content_right_font {
+    color:white;
+    text-align:right;
+    font-size: 12;
+}
+.top_content_right_font_big {
+    color:white;
+    text-align:right;
+    font-size: 30;
+}
+
+.content_info_label_font {
+    color: #979197;
+    text-align:center;
+    font-size: 12;
+}
+.content_info_text {
+    color: white;
+    text-align:center;
+    font-size: 12;
+}
+.content_info {
+    margin-top:15;
+    margin-left: 20;
+    margin-right: 20;
+    margin-bottom: 15;
+}
+.btn_confirm {
+    background-color:#261136;
+    color:white;
+    font-size:12;
+}
+.content_confirm {
+    margin-left: 20;
+    margin-right: 20;
+    margin-bottom: 15;
+}

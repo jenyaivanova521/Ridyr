@@ -1,0 +1,1 @@
+export * from './home_trip_card.component';
