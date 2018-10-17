@@ -1,7 +1,7 @@
 <GridLayout rows="*, auto">
   <StackLayout
     class="page" [ngSwitch]="selectedTab" row="0">
-    <HomeRidyrItineraryComponent *ngSwitchDefault></HomeRidyrItineraryComponent>
+    <HomeSearchTabComponent *ngSwitchDefault></HomeSearchTabComponent>
     <ItemsComponent *ngSwitchCase="1"></ItemsComponent>
     <HomeRidyrItineraryComponent *ngSwitchCase="2"></HomeRidyrItineraryComponent>
   </StackLayout>

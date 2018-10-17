@@ -15,9 +15,17 @@ import { HomeRidyrItineraryComponent } from "~/pages/main/home-ridyr-itinerary/h
 import { HomeTabOverlapComponent } from "~/shared/components/home_tab_overlap";
 import { HomeTripCardComponent } from "~/shared/components/home_trip_card";
 import { HomeSuggestComponent } from "~/shared/components/home_suggest_card";
+import { HomeSearchTabOverlapComponent } from "~/shared/components/home_search_tab_overlap";
 import { GridViewModule } from 'nativescript-grid-view/angular';
 
 import { registerElement } from "nativescript-angular";
+import { HomeSearchTabComponent } from "./pages/main/home-search-tab/home-search-tab.component";
+import { HomeRecommendedRidyrComponent } from "~/shared/components/home_recommended_ridyr";
+import { StarRatingComponent } from "~/shared/components/star-rating";
+import { HomeRidyrComponent } from "~/shared/components/home_ridyr";
+// import { NgShadowModule } from 'nativescript-ng-shadow';
+
+
 registerElement("Gradient", () => require("nativescript-gradient").Gradient);
 
 @NgModule({
@@ -30,26 +38,37 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
     HttpModule,
     HttpClientModule,
     GridViewModule,
+    // NgShadowModule,
   ],
   providers: [
     ItemService,
   ],
   declarations: [
     HomeRidyrItineraryComponent,
+    HomeSearchTabComponent,
     ItemsComponent,
     TabsComponent,
     AppComponent,
     HomeTabOverlapComponent,
     HomeTripCardComponent,
     HomeSuggestComponent,
+    HomeSearchTabOverlapComponent,
+    HomeRecommendedRidyrComponent,
+    HomeRidyrComponent,
+    StarRatingComponent,
     ...navigatableComponents
   ],
   exports: [
     ItemsComponent, 
     HomeRidyrItineraryComponent,
+    HomeSearchTabComponent,
     HomeTabOverlapComponent,
     HomeTripCardComponent,
     HomeSuggestComponent,
+    HomeSearchTabOverlapComponent,
+    HomeRecommendedRidyrComponent,
+    HomeRidyrComponent,
+    StarRatingComponent
   ],
   bootstrap: [AppComponent],
   schemas: [

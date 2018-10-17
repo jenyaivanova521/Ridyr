@@ -26,6 +26,7 @@ export class TabsComponent implements OnInit {
   constructor(private page: Page) { }
 
   ngOnInit(): void {
+    console.log("main tab - ngOnInit");
     this.page.actionBarHidden = true; 
   }
   tabLoaded(event) {

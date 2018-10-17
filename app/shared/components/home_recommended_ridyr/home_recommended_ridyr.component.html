@@ -1,0 +1,37 @@
+<FlexboxLayout class="content" flexDirection="column"
+    *ngFor="let item of list">
+    <GridLayout class="top_suggest">
+        <Image stretch="aspectFill" width="100%" height="200"
+            [src]="item.image"></Image>
+        <Gradient direction="to right" colors="#b3000000, #33000000">            
+        </Gradient>
+        <DockLayout width="100%" height="100%" stretchLastChild="false">
+            <StackLayout dock="bottom" orientation="vertical" style="padding-left:10;color: white;">                
+                <FlexboxLayout >
+                    <Image stretch="aspectFill" class="profile"
+                        src="~/resources/images/img-1.jpg"></Image>
+                </FlexboxLayout>
+                <label text="MIA - NYC" class="white"></label>
+                <StackLayout orientation="horizontal">
+                    <StackLayout width="60">
+                        <custome-star [value]="4" size="30"></custome-star>    
+                    </StackLayout>                    
+                    <label text="FRED TALBOT" style="margin-top:9; margin-left:10;font-size: 10;color:#ea5d99"></label>
+                </StackLayout>
+            </StackLayout>
+        </DockLayout>        
+    </GridLayout>
+    
+    <StackLayout orientation="horizontal" style ="background-color: #272727; color: white; padding: 10;">
+        <StackLayout width="120">
+            <label [text]="item.price" style="text-align: center; color: #7B1FA2;margin-bottom: 6; font-size: 18;"></label>
+            <label text="3 SEATS" class="btn_seat" style="padding-top: 10;"></label>
+        </StackLayout>
+        <StackLayout>
+            <label [text]="item.car"></label>
+            <label text="Bottled Water" class="small_text margin_left_20"></label>
+            <label text="Bluetooth" class="small_text margin_left_20"></label>
+            <label text="Quick Delivery" class="small_text margin_left_20"></label>
+        </StackLayout>
+    </StackLayout>
+</FlexboxLayout>

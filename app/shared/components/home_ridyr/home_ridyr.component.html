@@ -1,0 +1,19 @@
+<StackLayout class="content" orientation="horizontal"
+    *ngFor="let item of list">
+    <StackLayout width="50%">
+        <Image stretch="aspectFill" width="100%" height="100%"
+            [src]="item.image"></Image>
+    </StackLayout>
+    <DockLayout width="50%" height="100%" stretchLastChild="false">
+        <StackLayout dock="bottom" orientation="vertical" style="padding-left:10;color: black;"> 
+            <label [text]="item.name"></label>
+            <label text="RIDYR SINCE 2018" style="font-size:12"></label>
+            <FlexboxLayout>
+            <StackLayout width="50%">
+                <custome-star [value]="4" size="30"></custome-star>            
+            </StackLayout>
+            </FlexboxLayout>
+            <label text="3 SEAT(S) AVG $20-$80" class="btn_seat" style="padding-top: 10;color: white;"></label>    
+        </StackLayout>
+    </DockLayout>
+</StackLayout>
