@@ -23,6 +23,8 @@ import { HomeSearchTabComponent } from "./pages/main/home-search-tab/home-search
 import { HomeRecommendedRidyrComponent } from "~/shared/components/home_recommended_ridyr";
 import { StarRatingComponent } from "~/shared/components/star-rating";
 import { HomeRidyrComponent } from "~/shared/components/home_ridyr";
+import { RidyrDriverProfileListComponent } from "~/pages/main/ridyr-driver-profile-list/ridyr-driver-profile-list.component";
+import { NotificationIconComponent } from "~/shared/components/notification-icon";
 // import { NgShadowModule } from 'nativescript-ng-shadow';
 
 
@@ -45,7 +47,9 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
   ],
   declarations: [
     HomeRidyrItineraryComponent,
+    NotificationIconComponent,
     HomeSearchTabComponent,
+    RidyrDriverProfileListComponent,
     ItemsComponent,
     TabsComponent,
     AppComponent,
@@ -61,7 +65,9 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
   exports: [
     ItemsComponent, 
     HomeRidyrItineraryComponent,
+    NotificationIconComponent,
     HomeSearchTabComponent,
+    RidyrDriverProfileListComponent,
     HomeTabOverlapComponent,
     HomeTripCardComponent,
     HomeSuggestComponent,

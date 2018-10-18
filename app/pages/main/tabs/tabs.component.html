@@ -2,8 +2,9 @@
   <StackLayout
     class="page" [ngSwitch]="selectedTab" row="0">
     <HomeSearchTabComponent *ngSwitchDefault></HomeSearchTabComponent>
-    <ItemsComponent *ngSwitchCase="1"></ItemsComponent>
-    <HomeRidyrItineraryComponent *ngSwitchCase="2"></HomeRidyrItineraryComponent>
+    <ItemsComponent *ngSwitchCase="1"></ItemsComponent>    
+    <RidyrDriverProfileListComponent *ngSwitchCase="2"></RidyrDriverProfileListComponent>
+    <HomeRidyrItineraryComponent *ngSwitchCase="3"></HomeRidyrItineraryComponent>
   </StackLayout>
 
   <BottomBar 
