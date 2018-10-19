@@ -25,8 +25,10 @@ import { StarRatingComponent } from "~/shared/components/star-rating";
 import { HomeRidyrComponent } from "~/shared/components/home_ridyr";
 import { RidyrDriverProfileListComponent } from "~/pages/main/ridyr-driver-profile-list/ridyr-driver-profile-list.component";
 import { NotificationIconComponent } from "~/shared/components/notification-icon";
-// import { NgShadowModule } from 'nativescript-ng-shadow';
-
+import { NativeScriptSvgModule } from "nativescript-svg/angular";
+import { SelectInputComponent } from "~/shared/components/select-input";
+import { ListSelectModal } from "~/shared/components/list-select";
+import { ModalService } from "./shared/services/modal.service";
 
 registerElement("Gradient", () => require("nativescript-gradient").Gradient);
 
@@ -40,10 +42,14 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
     HttpModule,
     HttpClientModule,
     GridViewModule,
-    // NgShadowModule,
+    NativeScriptSvgModule,
   ],
   providers: [
     ItemService,
+    ModalService,
+  ],
+  entryComponents: [
+    ListSelectModal
   ],
   declarations: [
     HomeRidyrItineraryComponent,
@@ -60,6 +66,8 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
     HomeRecommendedRidyrComponent,
     HomeRidyrComponent,
     StarRatingComponent,
+    SelectInputComponent,
+    ListSelectModal,
     ...navigatableComponents
   ],
   exports: [
@@ -74,7 +82,9 @@ registerElement("Gradient", () => require("nativescript-gradient").Gradient);
     HomeSearchTabOverlapComponent,
     HomeRecommendedRidyrComponent,
     HomeRidyrComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    SelectInputComponent,
+    ListSelectModal
   ],
   bootstrap: [AppComponent],
   schemas: [

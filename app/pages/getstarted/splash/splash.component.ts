@@ -86,11 +86,14 @@ export class SplashComponent implements OnInit {
       // if(Config.token==null || Config.token=="")
       //   Config.token = getString("token");
       // console.log("Existing Token: "+ Config.token);
+
       if( Config.token != "" && Config.token != null ) {      
         this.router.navigate(["/main_tabs"]);
+        // this.router.navigate(["/phone"]);//TODO: SHOULD BE REMOVED AFTER TEST
       }
       else {
-        this.router.navigate(["/first_choice"], {replaceUrl:true});
+        // this.router.navigate(["/first_choice"], {replaceUrl:true});
+        this.router.navigate(["/phone"]);//TODO: SHOULD BE REMOVED AFTER TEST
       }
     }, 1000);
     this.page.actionBarHidden = true;

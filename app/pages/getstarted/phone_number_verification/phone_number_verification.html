@@ -1,0 +1,15 @@
+<GridLayout rows="auto, *" width="100%">
+  <Image src="res://bg_img" stretch="aspectFill" class="background"></Image>
+  <StackLayout row="0" orientation="vertical" class="container">  
+    <label class="logo_label" text="Enter your phone number:">/</label>
+    <StackLayout orientation="horizontal" class="email">
+      <label [text] = "contrycode" style="margin-top:9; width:50;text-align: center; font-size: 13;" (tap)="selectCountryCode()"></label>
+      <TextField hint="Your phone number" keyboardType="phone" 
+          [(ngModel)]="phone_number" 
+          autocorrect="false" autocapitalizationType="none" width="80%"></TextField>        
+    </StackLayout>    
+    <GridLayout class="driver-button-bg">
+      <Button text="NEXT STEP" class="submit-button" (tap)="nextstep()"></Button>
+    </GridLayout> 
+  </StackLayout>  
+</GridLayout>
