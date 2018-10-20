@@ -59,7 +59,7 @@ export class SplashComponent implements OnInit {
           });
         }
       },      
-      persist: false,
+      persist: true,
       storageBucket: 'gs://ridyr-1497879047259.appspot.com',
       onAuthStateChanged:(data:any) => {
         console.log("AuthState Changed: " + JSON.stringify(data));
@@ -92,8 +92,8 @@ export class SplashComponent implements OnInit {
         // this.router.navigate(["/phone"]);//TODO: SHOULD BE REMOVED AFTER TEST
       }
       else {
-        // this.router.navigate(["/first_choice"], {replaceUrl:true});
-        this.router.navigate(["/phone"]);//TODO: SHOULD BE REMOVED AFTER TEST
+        this.router.navigate(["/first_choice"], {replaceUrl:true});
+        // this.router.navigate(["/phone"]);//TODO: SHOULD BE REMOVED AFTER TEST
       }
     }, 1000);
     this.page.actionBarHidden = true;

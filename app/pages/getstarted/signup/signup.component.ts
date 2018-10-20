@@ -62,14 +62,15 @@ export class SignupComponent implements OnInit {
       email: this.user.email,
       password: this.user.password
     }).then( (result) => {
-          console.log("Created");
+          console.log("Created Account:", result);
           this.indicator.hide();
           alert({
             title: "User created",
-            message: "userid: " + result.key,
+            message: "userid: " + result.uid,
             okButtonText: "Okay"
           })
-          this.login();
+          Config.userID = result.uid;
+          this.verifyPhone(result.uid);
         },
         (errorMessage) => {
           console.log("Error");
@@ -83,8 +84,16 @@ export class SignupComponent implements OnInit {
     );
   }
 
-  login() {
-    this.router.navigate(["/login"]);    
+  verifyPhone(id) {  
+    firebase.setValue(
+      '/'+Config.type+'/'+id,
+      {
+        name:this.user.fullName,
+        email: this.user.email,        
+        isPhoneVerified: false, 
+      }
+    );    
+    this.router.navigate(["/phone"]);    
   }
   toggleShowPassword(){
     this.isShowedPassword = !this.isShowedPassword;

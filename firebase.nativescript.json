@@ -2,7 +2,7 @@
     "using_ios": true,
     "using_android": true,
     "firestore": true,
-    "realtimedb": false,
+    "realtimedb": true,
     "remote_config": false,
     "messaging": true,
     "crashlytics": true,

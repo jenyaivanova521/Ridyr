@@ -20,13 +20,13 @@ module.exports = function($logger, $projectData) {
                 let dependenciesNode = buildGradleContent.indexOf("dependencies", 0);
                 if (dependenciesNode > -1) {
                     dependenciesNode = buildGradleContent.indexOf("}", dependenciesNode);
-                    buildGradleContent = buildGradleContent.substr(0, dependenciesNode - 1) + '	    classpath "io.fabric.tools:gradle:1.25.1"\n' + buildGradleContent.substr(dependenciesNode - 1);
+                    buildGradleContent = buildGradleContent.substr(0, dependenciesNode - 1) + '	    classpath "io.fabric.tools:gradle:1.25.4"\n' + buildGradleContent.substr(dependenciesNode - 1);
                 }
             }
 
             let gradlePattern = /classpath ('|")com\.android\.tools\.build:gradle:\d+\.\d+\.\d+('|")/;
             let googleServicesPattern = /classpath ('|")com\.google\.gms:google-services:\d+\.\d+\.\d+('|")/;
-            let latestGoogleServicesPlugin = 'classpath "com.google.gms:google-services:4.0.1"';
+            let latestGoogleServicesPlugin = 'classpath "com.google.gms:google-services:4.1.0"';
             if (googleServicesPattern.test(buildGradleContent)) {
                 buildGradleContent = buildGradleContent.replace(googleServicesPattern, latestGoogleServicesPlugin);
             } else {

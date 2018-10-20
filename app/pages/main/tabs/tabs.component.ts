@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Page } from "tns-core-modules/ui/page";
 import { BottomBarItem, BottomBar, TITLE_STATE, SelectedIndexChangedEventData, Notification  } from 'nativescript-bottombar';
+import firebase = require("nativescript-plugin-firebase");
 
 @Component({
   moduleId: module.id,
